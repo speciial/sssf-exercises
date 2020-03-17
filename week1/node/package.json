@@ -4,7 +4,7 @@
   "description": "First Node.JS tutorial",
   "main": "my-script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon my-script.js"
   },
   "author": "Christian \"speciial\" Heidemann",
   "license": "MIT",
