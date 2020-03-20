@@ -6,10 +6,7 @@ const catController = require('../controllers/catController');
 
 catRouter.get('/', catController.cat_list_get);
 
-catRouter.get("/:id", (req, res) => {
-  const catID = req.params.id;
-  res.send("You requested a cat whose id is " + catID);
-});
+catRouter.get("/:id", catController.cat_get);
 
 catRouter.post("/", (req, res) => {
   res.send("With this endpoint you can add cats.");
