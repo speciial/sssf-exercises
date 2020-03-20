@@ -1,5 +1,5 @@
 "use strict";
-const catModel = require("../models/catModel");
+const catModel = require('../models/catModel');
 
 const cats = catModel.cats;
 
@@ -9,7 +9,7 @@ const cat_list_get = (req, res) => {
 
 const cat_get = (req, res) => {
     const catID = parseInt(req.params.id);
-    res.send(catModel.cats.filter((cat) => {
+    res.send(cats.filter((cat) => {
         return cat.id == catID;
     }));
 };
