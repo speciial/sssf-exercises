@@ -12,7 +12,7 @@ const catRouter = require('./routes/catRoute');
 const userRouter = require('./routes/userRoute');
 
 app.use(cors());
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use('/cat', catRouter);
