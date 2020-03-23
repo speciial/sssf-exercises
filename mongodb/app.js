@@ -27,22 +27,3 @@ app.use("/auth", authRoute);
 db.on('connected', () => {
     app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 });
-
-/*
-db.createUser(
-    {
-      user: "myUserAdmin",
-      pwd: "pass1234",
-      roles: [ { role: "userAdminAnyDatabase", db: "admin" }, "readWriteAnyDatabase" ]
-    }
-  )
-db.createUser(
-  {
-    user: "myTester",
-    pwd:  "1234pass",
-    roles: [ { role: "readWrite", db: "test" },
-             { role: "read", db: "reporting" } ]
-  }
-)
-
- */
