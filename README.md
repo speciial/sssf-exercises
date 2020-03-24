@@ -7,4 +7,4 @@ All exercises can be found in their respective branch. Week 1 exercises in branc
 ## Direct links to the branches
 - [Week 1](https://github.com/speciial/sssf-exercises/tree/week1)
 - [Week 2](https://github.com/speciial/sssf-exercises/tree/week2)
-- [Week 4]()
+- [Week 4](https://github.com/speciial/sssf-exercises/tree/week4)
