@@ -8,3 +8,5 @@ All exercises can be found in their respective branch. Week 1 exercises in branc
 - [Week 1](https://github.com/speciial/sssf-exercises/tree/week1)
 - [Week 2](https://github.com/speciial/sssf-exercises/tree/week2)
 - [Week 4](https://github.com/speciial/sssf-exercises/tree/week4)
+- [MongoDB](https://github.com/speciial/sssf-exercises/tree/mongodb)
+- [Chargemap](https://github.com/speciial/sssf-exercises/tree/chargemap)
