@@ -4,28 +4,28 @@ const router = express.Router();
 
 const passport = require("../utils/passport");
 
-const stationController = require("../controllers/stationController");
+const connectionController = require("../controllers/connectionController");
 
-router.get("/", stationController.station_list_get);
+router.get("/", connectionController.connection_list_get);
 
-router.get("/:id", stationController.station_get);
+router.get("/:id", connectionController.connection_get);
 
 router.post(
     "/",
     passport.authenticate("jwt", { session: false }),
-    stationController.station_post
+    connectionController.connection_post
 );
 
 router.put(
     "/",
     passport.authenticate("jwt", { session: false }),
-    stationController.station_put
+    connectionController.connection_put
 );
 
 router.delete(
     "/:id",
     passport.authenticate("jwt", { session: false }),
-    stationController.station_delete
+    connectionController.connection_delete
 );
 
 module.exports = router;
