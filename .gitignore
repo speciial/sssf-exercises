@@ -43,6 +43,7 @@ jspm_packages/
 
 # MongoDB local files
 chargemap/
+mongo/
 
 # TypeScript v1 declaration files
 typings/
