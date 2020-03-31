@@ -10,3 +10,4 @@ All exercises can be found in their respective branch. Week 1 exercises in branc
 - [Week 4](https://github.com/speciial/sssf-exercises/tree/week4)
 - [MongoDB](https://github.com/speciial/sssf-exercises/tree/mongodb)
 - [Chargemap](https://github.com/speciial/sssf-exercises/tree/chargemap)
+- [GraphQL](https://github.com/speciial/sssf-exercises/tree/graphql)
