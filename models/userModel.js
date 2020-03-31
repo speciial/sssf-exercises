@@ -2,6 +2,18 @@
 const users = [
     {
         id: "1",
+        name: "John Doe",
+        email: "john@metropolia.fi",
+        password: "1234"
+    },
+    {
+        id: "2",
+        name: "Jane Doez",
+        email: "jane@metropolia.fi",
+        password: "qwer"
+    },
+    {
+        id: "3",
         name: "Christian",
         email: "christian@mail.com",
         password: "1234"

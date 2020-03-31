@@ -5,11 +5,10 @@ const passportJWT = require("passport-jwt");
 const JWTStrategy = passportJWT.Strategy;
 const ExtraactJWT = passportJWT.ExtractJwt;
 
-const userModel = require("../models/user");
+const userModel = require("../models/userModel");
 
 passport.use(
     new Strategy(
-        { usernameField: "username", passwordField: "password" },
         (username, password, done) => {
             try {
                 const user = userModel.getUserLogin(username);

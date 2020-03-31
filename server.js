@@ -11,6 +11,7 @@ const cors = require("cors");
 
 const db = require("./db/db");
 const authRoute = require("./routes/authRoute");
+const passport = require("./utils/passport");
 
 const app = express();
 
@@ -19,7 +20,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(cors());
 
-// dummy function to check authentication (irl: e.g. passport-jwt)
 const checkAuth = (req, res) => {
     passport.authenticate("jwt", { session: false }, (err, user) => {
         if(err || !user) {
