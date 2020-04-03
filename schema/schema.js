@@ -261,9 +261,6 @@ const RootQuery = new GraphQLObjectType({
 });
 
 const Mutation = new GraphQLObjectType({
-    // add station
-    // modify station
-    // delete station
     name: "Mutation",
     description: "Mutations...",
     fields: {
@@ -289,8 +286,8 @@ const Mutation = new GraphQLObjectType({
                 try {
                     checkAuth(req, res);
                     var connections = [];
-                    await args.Connections.forEach(element => {
-                        const newConnection = new connection(element);
+                    await args.Connections.map(conn => {
+                        const newConnection = new connection(conn);
                         newConnection.save();
                         connections.push(newConnection);
                     });
@@ -322,15 +319,33 @@ const Mutation = new GraphQLObjectType({
             resolve: async (parent, args, { req, res, checkAuth }) => {
                 try {
                     checkAuth(req, res);
-                    // TODO: ask the teachers how they think a
-                    // modification should work. Should we just  
-                    // update the things, that were pushed?
-                    // What should we do with the connections, then?
-                    // Should they be overwritten or should we 
-                    // append them?
-                    // What if no connections were passed? Does that 
-                    // mean, we replace all of the existing ones with
-                    // nothing?
+
+                    const oldStation = await station.findById(args.id);
+                    await oldStation.Connections.map(async connectionID => {
+                        await connection.findByIdAndDelete(connectionID);
+                    });
+
+                    var updatedConnections = await Promise.all(
+                        args.Connections.map(async conn => {
+                            const c = new connection(conn);
+                            await c.save();
+                            return c._id;
+                        })
+                    );
+                    args.Connections = updatedConnections;
+
+                    const updatedStation = await station.findByIdAndUpdate(
+                        { _id: args.id },
+                        args,
+                        { new: true },
+                        (error, doc) => {
+                            if (error) {
+                                console.log(error);
+                                return new Error(error);
+                            }
+                        }
+                    );
+                    return updatedStation;
                 } catch (error) {
                     return new Error(error);
                 }
@@ -344,8 +359,8 @@ const Mutation = new GraphQLObjectType({
                 try {
                     checkAuth(req, res);
                     const delStation = await station.findByIdAndDelete(args.id);
-                    await delStation.Connections.forEach(element => {
-                        connection.findByIdAndDelete(element);
+                    await delStation.Connections.map(conn => {
+                        connection.findByIdAndDelete(conn);
                     });
                     return delStation;
                 } catch (error) {
