@@ -11,3 +11,5 @@ All exercises can be found in their respective branch. Week 1 exercises in branc
 - [MongoDB](https://github.com/speciial/sssf-exercises/tree/mongodb)
 - [Chargemap](https://github.com/speciial/sssf-exercises/tree/chargemap)
 - [GraphQL](https://github.com/speciial/sssf-exercises/tree/graphql)
+- [GraphQL Chargemap](https://github.com/speciial/sssf-exercises/tree/gql-chargemap)
+- [SocketIO](https://github.com/speciial/sssf-exercises/tree/socketio)

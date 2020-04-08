@@ -1,0 +1,37 @@
+{
+  "name": "socketio-chat",
+  "version": "1.0.0",
+  "description": "Small chat program with socketio",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.9.7",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/speciial/sssf-exercises.git"
+  },
+  "author": "Christian \"speciial\" Heidemann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/speciial/sssf-exercises/issues"
+  },
+  "homepage": "https://github.com/speciial/sssf-exercises#readme"
+}
