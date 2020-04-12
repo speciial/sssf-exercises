@@ -42,9 +42,17 @@ app.use("/graphql", (req, res) => {
 });
 
 db.on("connected", () => {
-    app.listen(3000);
+    process.env.NODE_ENV = process.env.NODE_ENV || "development";
+    if (process.env.NODE_ENV === "production") {
+        require("./production")(app, process.env.PORT);
+    } else {
+        require("./localhost")(
+            app,
+            process.env.HTTPS_PORT,
+            process.env.HTTP_PORT
+        );
+    }
 });
-
 
 /*
     Audit result: 

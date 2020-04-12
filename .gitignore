@@ -44,6 +44,9 @@ jspm_packages/
 # MongoDB local files
 mongo/
 
+# MongoDB local files
+certificate/
+
 # TypeScript v1 declaration files
 typings/
 
